@@ -272,7 +272,7 @@ describe('Basic Functions', function() {
   });
 });
 
-describe('Higher Functions', function() {
+describe.only('Higher Functions', function() {
   // define a function named 'doubleFunc' that takes a function as an argument,
   //  calls it twice, and returns the results added together
   it('should add together the result of a function called twice', function() {
@@ -313,7 +313,7 @@ describe('Higher Functions', function() {
 
   // define a function named 'getDoubler' that returns a function that,
   //  when called with a number, will return that number x 2
-  it('should prouce a doubling function', function() {
+  it.only('should prouce a doubling function', function() {
     assert.isFunction(fn.getDoubler());
     assert.equal(100, (fn.getDoubler())(50));
     assert.equal(-1, (fn.getDoubler())(-0.5));
