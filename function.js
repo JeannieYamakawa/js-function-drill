@@ -51,34 +51,12 @@ return {1:2, 3:4, 5:6, 7:8}
 },
 
 fn.alphaObject = function(){
-var myObject = {};
-myObject.a=1;
-myObject.b=2;
-myObject.c=3;
-myObject.d=4;
-myObject.e=5;
-myObject.f=6;
-myObject.g=7;
-myObject.h=8;
-myObject.i=9;
-myObject.j=10;
-myObject.k=11;
-myObject.l=12;
-myObject.m=13;
-myObject.n=14;
-myObject.o=15;
-myObject.p=16;
-myObject.q=17;
-myObject.r=18;
-myObject.s=19;
-myObject.t=20;
-myObject.u=21;
-myObject.v=22;
-myObject.w=23;
-myObject.x=24;
-myObject.y=25;
-myObject.z=26;
-return myObject
+    var myObject = {};
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    for (var i = 0; i<alphabet.length; i++){
+    	myObject[alphabet[i]]=i+1
+    }
+    return myObject
 },
 
 fn.fiveArr = function(){

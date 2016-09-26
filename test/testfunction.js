@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var fn = require('../function.js');
 var key = getKey();
 
-describe('Simple Functions', function() {
+describe.only('Simple Functions', function() {
   // define a function named 'nothing' that doesn't return anything
   it("shouldn't return anything", function() {
     assert.isUndefined(fn.nothing());
@@ -71,7 +71,7 @@ describe('Simple Functions', function() {
 
   // define a function named 'alphaObject' that returns an object with the lowercase
   //   letters of the alphabet as keys, and their number values as values (a=1, b=2, etc.)
-  it("should return an object with letter keys and number values", function() {
+  it.only("should return an object with letter keys and number values", function() {
     assert.deepEqual(key.alphaObject, fn.alphaObject());
   });
 
@@ -272,7 +272,7 @@ describe('Basic Functions', function() {
   });
 });
 
-describe.only('Higher Functions', function() {
+describe('Higher Functions', function() {
   // define a function named 'doubleFunc' that takes a function as an argument,
   //  calls it twice, and returns the results added together
   it('should add together the result of a function called twice', function() {
@@ -313,7 +313,7 @@ describe.only('Higher Functions', function() {
 
   // define a function named 'getDoubler' that returns a function that,
   //  when called with a number, will return that number x 2
-  it.only('should prouce a doubling function', function() {
+  it('should prouce a doubling function', function() {
     assert.isFunction(fn.getDoubler());
     assert.equal(100, (fn.getDoubler())(50));
     assert.equal(-1, (fn.getDoubler())(-0.5));
